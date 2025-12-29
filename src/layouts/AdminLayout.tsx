@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { getConversations } from "../api/api_conversation";
 import { getMessages } from "../api/api_messages";
-import { motion } from "framer-motion";
 import type { Message } from "../types/Message";
 import Skeleton from "../components/admin/Skeleton";
 // importar panel de usuarios
@@ -89,7 +88,8 @@ export default function AdminLayout() {
 
         {/* PANEL DE CONVERSACIONES */}
         {tab === "conversations" && (
-          <><div className="pl-6 pr-6 pt-6 pb-0">
+        <>
+          <div className="pl-6 pr-6 pt-6 pb-0">
             <h3 className="font-semibold mb-4 text-text-primary">Mensajes</h3>
 
             {!selected && (
@@ -105,7 +105,8 @@ export default function AdminLayout() {
                 messages={messages}
                 loading={loading} />
             )}
-          </div><div ref={bottomRef} /></>
+          </div><div ref={bottomRef} />
+        </>
         )}
 
         {/* PANEL DE USUARIOS */}

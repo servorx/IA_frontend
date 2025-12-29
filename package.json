@@ -20,6 +20,7 @@
     "react-dom": "^19.2.0",
     "react-textarea-autosize": "^8.5.9",
     "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.3",
     "tailwindcss": "^4.1.17",
     "uuid": "^13.0.0"
   },
